@@ -10,6 +10,7 @@
 
     <properties>
         <version_junit-jupiter-api>5.6.0</version_junit-jupiter-api>
+        <version_quartz>2.3.2</version_quartz>
     </properties>
 
     <dependencies>
@@ -20,6 +21,13 @@
             <version>${version_junit-jupiter-api}</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${version_quartz}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
