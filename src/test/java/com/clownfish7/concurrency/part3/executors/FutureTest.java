@@ -44,12 +44,12 @@ public class FutureTest {
         });
         AtomicBoolean atomicBoolean = new AtomicBoolean(true);
         Future<Integer> future = fixedThreadPool.submit(() -> {
-//            try {
-//                TimeUnit.SECONDS.sleep(2);
-//                System.out.println("something");
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                TimeUnit.SECONDS.sleep(2);
+                System.out.println("something");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 //            while (!Thread.currentThread().isInterrupted()) {
 //            }
             while (atomicBoolean.get()) {
