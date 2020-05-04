@@ -1,4 +1,4 @@
-package com.clownfish7.concurrency.part3.collections;
+package com.clownfish7.concurrency.part3.collections.custom;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,14 +6,13 @@ import org.junit.jupiter.api.Test;
  * @author You
  * @create 2020-05-04 20:29
  */
-public class LinkedListTest {
+public class PriorityLinkedListTest {
 
     @Test
     public void test() {
-        LinkedList<String> list = LinkedList.of("python", "scala", "java", "c++");
+        PriorityLinkedList<Integer> list = PriorityLinkedList.of(1,3,5,7,9,2,4,6,8);
         assert !list.isEmpty();
-        assert list.size() == 4;
-        list.addFirst("nodejs");
+        list.addFirst(11);
         while (!list.isEmpty()) {
             System.out.println(list.removeFirst());
         }

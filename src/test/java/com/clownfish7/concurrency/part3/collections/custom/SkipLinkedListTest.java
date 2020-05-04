@@ -1,4 +1,4 @@
-package com.clownfish7.concurrency.part3.collections;
+package com.clownfish7.concurrency.part3.collections.custom;
 
 import org.junit.jupiter.api.Test;
 

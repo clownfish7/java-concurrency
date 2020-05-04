@@ -1,10 +1,10 @@
-package com.clownfish7.concurrency.part3.collections;
+package com.clownfish7.concurrency.part3.collections.custom;
 
 /**
  * @author You
  * @create 2020-05-04 18:14
  */
-public class PriorityLinkedList<E extends Comparable<E>> {
+public class LinkedList<E> {
 
     private static final String PLAIN_NULL = "null";
 
@@ -12,12 +12,12 @@ public class PriorityLinkedList<E extends Comparable<E>> {
 
     private int size;
 
-    public PriorityLinkedList() {
+    public LinkedList() {
         this.first = null;
     }
 
-    public static <E extends Comparable<E>> PriorityLinkedList<E> of(E... elements) {
-        PriorityLinkedList<E> linkedList = new PriorityLinkedList<>();
+    public static <E> LinkedList<E> of(E... elements) {
+        LinkedList<E> linkedList = new LinkedList<>();
         if (elements.length > 0) {
             for (E element : elements) {
                 linkedList.addFirst(element);
@@ -26,22 +26,11 @@ public class PriorityLinkedList<E extends Comparable<E>> {
         return linkedList;
     }
 
-    public PriorityLinkedList<E> addFirst(E e) {
+    public LinkedList<E> addFirst(E e) {
         final Node<E> node = new Node<>(e);
-        Node<E> previous = null;
-        Node<E> current = first;
-        while (current != null && e.compareTo(current.value) > 0) {
-            previous = current;
-            current = current.next;
-        }
-        if (previous == null) {
-            node.next = first;
-            first = node;
-        } else {
-            previous.next = node;
-            node.next = current;
-        }
+        node.next = first;
         size++;
+        first = node;
         return this;
     }
 
