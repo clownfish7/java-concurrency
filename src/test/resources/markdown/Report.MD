@@ -12,4 +12,4 @@
 | DelayQueue            | No        | 单元格                         |单元格 |单元格 |单元格 |单元格 |单元格 |单元格 |单元格 |
 | LinkedTransferQueue   | No        | 尾部插入元素，永远返回 true       |单元格 |单元格 |单元格 |单元格 |单元格 |单元格 |单元格 |
 
-这可太丑了!？ wtf man
+**so ugly!? what the fuck man**
